@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #172033;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #172033;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #dbeafe 0, transparent 35%),
+    radial-gradient(circle at bottom right, #ede9fe 0, transparent 35%),
+    #f8fafc;
+}
+
+.login-card {
+  width: 430px;
+  max-width: 100%;
+  padding: 42px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.12);
+}
+
+.logo {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+.login-card h1 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #111827;
+}
+
+.login-card > p {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.login-card h3 {
+  margin-bottom: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #334155;
+}
+
+.role-btn {
+  width: 100%;
+  padding: 17px;
+  margin-top: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: white;
+  color: #172033;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.role-btn:hover {
+  border-color: #6366f1;
+  background: #f8f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.1);
+}
+
+.role-btn span {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  height: 72px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.brand strong {
+  display: block;
+  color: #111827;
+  font-size: 15px;
+}
+
+.brand span {
+  display: block;
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.role {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.logout {
+  padding: 8px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: white;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.logout:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.page-title h1,
+.student-hero h1 {
+  color: #111827;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  font-weight: 800;
+}
+
+.page-title p:not(.eyebrow),
+.student-hero p {
+  margin-top: 9px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.success,
+.error {
+  margin: 25px 0;
+  padding: 13px 17px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.success {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================
+   ORGANIZER DASHBOARD
+========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  gap: 34px;
+  margin-top: 35px;
+  align-items: start;
+}
+
+.form-card,
+.admin-event,
+.event-card,
+.ticket {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 18px;
+}
+
+.form-card {
+  padding: 27px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.form-card h2 {
+  color: #111827;
+  font-size: 19px;
+}
+
+.muted {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+form {
+  margin-top: 21px;
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #dbe1ea;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-size: 13px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a0aec0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.primary-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px rgba(79, 70, 229, 0.2);
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.28);
+}
+
+.primary-btn:disabled {
+  background: #cbd5e1;
+  box-shadow: none;
+  transform: none;
+}
+
+.full {
+  width: 100%;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+  color: #111827;
+  font-size: 20px;
+}
+
+/* =========================
+   ADMIN EVENTS
+========================= */
+
+.admin-event {
+  position: relative;
+  margin-bottom: 17px;
+  padding: 23px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.03);
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.admin-event h3 {
+  margin: 11px 0 8px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.admin-event p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.seat-box {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  min-width: 75px;
+  text-align: right;
+}
+
+.seat-box strong {
+  display: block;
+  color: #4f46e5;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.seat-box span,
+.seat-box small {
+  display: block;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.seat-box small {
+  margin-top: 4px;
+}
+
+.attendees {
+  margin-top: 19px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f4;
+}
+
+.attendees > strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.attendee {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.attendee strong,
+.attendee small {
+  display: block;
+}
+
+.attendee strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.attendee small {
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+/* =========================
+   STUDENT HERO
+========================= */
+
+.student-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 46px;
+  border: 1px solid #e0e7ff;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, #ddd6fe 0, transparent 35%),
+    linear-gradient(120deg, #eef2ff, #ffffff);
+}
+
+.hero-stat {
+  min-width: 155px;
+  padding: 21px 27px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.hero-stat strong {
+  display: block;
+  color: #4f46e5;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.hero-stat span {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.section-heading-row {
+  margin: 42px 0 20px;
+}
+
+.section-heading-row h2 {
+  color: #111827;
+  font-size: 22px;
+}
+
+.section-heading-row p {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.event-card {
+  padding: 25px;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 25px rgba(15, 23, 42, 0.035);
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: #d8dcff;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.event-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.available,
+.soldout {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.available {
+  color: #16a34a;
+}
+
+.soldout {
+  color: #dc2626;
+}
+
+.event-card h2 {
+  margin: 18px 0 8px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.description {
+  min-height: 47px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.event-details {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+}
+
+.event-details p {
+  margin: 8px 0;
+  color: #475569;
+  font-size: 12px;
+}
+
+.event-details span {
+  margin-right: 8px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.modal-card {
+  position: relative;
+  width: 430px;
+  max-width: 100%;
+  padding: 31px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.modal-card h2 {
+  margin-top: 15px;
+  color: #111827;
+  font-size: 22px;
+}
+
+.close {
+  position: absolute;
+  top: 13px;
+  right: 17px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #111827;
+}
+
+.seat-notice {
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #e0e7ff;
+  border-radius: 9px;
+  background: #f5f7ff;
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   DIGITAL PASS
+========================= */
+
+.pass-page {
+  max-width: 800px;
+}
+
+.back-btn {
+  margin-bottom: 5px;
+  padding: 7px 0;
+  border: none;
+  background: transparent;
+  color: #4f46e5;
+  font-size: 13px;
+}
+
+.back-btn:hover {
+  color: #3730a3;
+}
+
+.pass-wrapper {
+  margin-top: 30px;
+}
+
+.pass-header {
+  margin-bottom: 27px;
+  text-align: center;
+}
+
+.check {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.pass-header h1 {
+  color: #111827;
+  font-size: 29px;
+  letter-spacing: -0.6px;
+}
+
+.pass-header > p:last-child {
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.ticket {
+  padding: 35px;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.09);
+}
+
+.ticket-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirmed {
+  color: #16a34a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ticket h2 {
+  margin: 25px 0 8px;
+  color: #111827;
+  font-size: 28px;
+}
+
+.ticket-description {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ticket-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 29px;
+}
+
+.ticket-info span,
+.registration-id span {
+  display: block;
+  margin-bottom: 5px;
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.ticket-info strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.registration-id {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px dashed #cbd5e1;
+  text-align: center;
+}
+
+.registration-id strong {
+  color: #4f46e5;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   DATE/TIME HELP TEXT
+========================= */
+
+.input-help {
+  display: block;
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-stat {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0 4%;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .role {
+    display: none;
+  }
+
+  .container {
+    width: 92%;
+    padding: 30px 0;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+  }
+
+  .page-title h1,
+  .student-hero h1 {
+    font-size: 30px;
+  }
+
+  .student-hero {
+    padding: 30px;
+  }
+
+  .ticket {
+    padding: 25px 20px;
+  }
+
+  .ticket-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ticket h2 {
+    font-size: 23px;
+  }
+
+  .seat-box {
+    position: static;
+    margin-top: 18px;
+    text-align: left;
+  }
+}
